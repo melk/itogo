@@ -1,0 +1,65 @@
+// Place all the styles related to the main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.top_title{
+  border-bottom:1px;
+  border-bottom-style:solid;
+}
+
+.container{
+  width: 960px;
+  margin: 0 auto;
+}
+
+.center_column{
+  width:546px;
+  height:540px;
+  padding:10px;
+   float:left;
+   border-left:1px;
+   border-left-style:solid;
+   border-right:1px;
+   border-right-style:solid;
+   overflow: scroll;
+}
+
+.left_column{
+  width:207px;
+  float:left;
+}
+
+.right_column{
+  margin-left:10px;
+  float:left;
+}
+
+.top_profile{
+  height:65px;
+  border-bottom:1px;
+  border-bottom-style:solid;
+}
+
+.profile_photo{
+  float:left;
+  margin-right:10px;
+}
+
+.circle{
+  float:right;
+  width:18px;
+  height:18px;
+  border-radius:40px;
+  font-size:1.0em;
+  color:#fff;
+  text-align:center;
+  background:#FF3333;
+  }
+
+.vav_bar{
+ margin-right:10px; 
+}
+
+.result_photo{
+  height:87px;
+  width:87px;
+}

@@ -1,0 +1,53 @@
+<div class="top_title">
+	<center>
+		iToGo
+	</center>
+</div>
+<div class="container">
+	<div class="left_column">
+		<div class="top_profile">
+			<%= image_tag("profile.jpg", :alt => "Norman Chen", :size => "50x50", :class => "profile_photo") %>
+			<div class="profile_name">
+				Norman Chen
+			</div>
+			<div>
+				Edit your profile
+			</div>
+		</div>
+		<div class="vav_bar">
+			<div>
+				You want: Go Club
+			</div>
+			<div>
+				<div class="circle">
+					3
+				</div>
+				Chat
+			</div>
+		</div>
+
+	</div>
+
+	<div class="center_column">
+		<% for i in 1..540 %>
+		<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
+		<% end %>
+
+	</div>
+	<div class="right_column">
+		<div>
+			Travel
+		</div>
+		<div>
+			Sport
+		</div>
+		<div>
+			Food
+		</div>
+		<div>
+			Club
+		</div>
+	</div>
+</div>
+
+
