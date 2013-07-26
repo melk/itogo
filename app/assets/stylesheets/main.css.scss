@@ -1,13 +1,26 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+border: 0;
+font-size: 100%;
+margin: 0;
+outline: 0;
+padding: 0;
+font-family: 'CenturyGothic', arial;
+}
 .top_title{
   border-bottom:1px;
   border-bottom-style:solid;
+   border-bottom-color:#ffffff;
+   background-color:#ff607a;
+   width:100%;
+   
 }
 .title_container{
    width: 960px;
    margin: 0 auto;
+   background-color:#ff607a;
 }
 
 .iToGo{
@@ -15,11 +28,15 @@
 }
 .logout{
   float:right;
+   position: relative;
+  padding: 30px;
+  color:#ffffff;
 }
 
 .container{
   width: 960px;
   margin: 0 auto;
+  padding:10px;
 }
 
 .center_column{
@@ -35,7 +52,7 @@
 }
 
 .left_column{
-  width:207px;
+  width:190px;
   float:left;
 }
 
@@ -43,9 +60,15 @@
   margin-left:10px;
   float:left;
 }
-
+.profile_name{
+   position: relative;
+  font-size:13px;
+  width:100px;
+  top:40px;
+  float:right;
+}
 .top_profile{
-  height:65px;
+  height:80px;
   border-bottom:1px;
   border-bottom-style:solid;
 }
@@ -73,4 +96,142 @@
 .result_photo{
   height:87px;
   width:87px;
+}
+#bg {
+  position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: url(image-path("bg1.jpg"));
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+background-color: #000;
+z-index:0;
+}
+#user_nav{
+   position: relative;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top:20%;
+  background-color:rgba(255,96,122,0.5);
+  color:#ffffff;
+  font-size:18px;
+  text-align:center;
+ font-family: 'Londrina Shadow', cursive;
+}
+#text1{
+  color:#ffffff;
+  font-size:30px;
+  text-shadow:1px  1px  1px  #000000;
+ font-family: 'Londrina Shadow', cursive;
+}
+#text2{
+  color:#ffffff;
+  font-size:50px;
+  text-shadow:1px  1px  1px  #000000;
+ font-family: 'Londrina Shadow', cursive;
+}
+#user_nav img{
+  width:200px;
+  cursor: pointer;
+opacity: 0.9;
+}
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.center_column {
+  width:546px;
+  height:540px;
+  padding:10px;
+   float:left;
+   border-left:1px;
+   border-left-style:solid;
+   border-right:1px;
+   border-right-style:solid;
+   overflow: scroll;
+}
+ul.tabs {
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+}
+ul.tabs li {
+  float: left;
+  height: 31px;
+  line-height: 31px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -1px;  /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
+  border: 1px solid #999;
+  border-left: none;
+  background: #e1e1e1;
+}
+ul.tabs li a {
+  display: block;
+  padding: 0 20px;
+  color: #000;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+ul.tabs li a:hover {
+  background: #ccc;
+}
+ul.tabs li.active  {
+  background: #fff;
+  border-bottom: 1px solid#fff;
+}
+ul.tabs li.active a:hover {
+  background: #fff;
+}
+ul.tabs2 {
+  width: 100%;
+  height: 32px;
+  border-bottom: 1px solid #999;
+  border-left: 1px solid #999;
+}
+ul.tabs2 li {
+  float: left;
+  height: 31px;
+  line-height: 31px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: -1px;  /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
+  border: 1px solid #999;
+  border-left: none;
+  background: #e1e1e1;
+}
+ul.tabs2 li a {
+  display: block;
+  padding: 0 20px;
+  color: #000;
+  border: 1px solid #fff;
+  text-decoration: none;
+}
+ul.tabs2 li a:hover {
+  background: #ccc;
+}
+ul.tabs2 li.active  {
+  background: #fff;
+  border-bottom: 1px solid#fff;
+}
+ul.tabs2 li.active a:hover {
+  background: #fff;
+}
+div.tab_container {
+  clear: left;
+  width: 100%;
+  border: 1px solid #999;
+  border-top: none;
+  background: #fff;
+}
+div.tab_container .tab_content {
+  padding: 20px;
+}
+div.tab_container .tab_content h2 {
+  margin: 0 0 20px;
 }
