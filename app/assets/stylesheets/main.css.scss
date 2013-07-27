@@ -48,7 +48,6 @@ font-family: 'CenturyGothic', arial;
    border-left-style:solid;
    border-right:1px;
    border-right-style:solid;
-   overflow: scroll;
 }
 
 .left_column{
@@ -152,7 +151,6 @@ ul, li {
    border-left-style:solid;
    border-right:1px;
    border-right-style:solid;
-   overflow: scroll;
 }
 ul.tabs {
   width: 100%;
@@ -188,40 +186,6 @@ ul.tabs li.active  {
 ul.tabs li.active a:hover {
   background: #fff;
 }
-ul.tabs2 {
-  width: 100%;
-  height: 32px;
-  border-bottom: 1px solid #999;
-  border-left: 1px solid #999;
-}
-ul.tabs2 li {
-  float: left;
-  height: 31px;
-  line-height: 31px;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: -1px;  /* 讓 li 往下移來遮住 ul 的部份 border-bottom */
-  border: 1px solid #999;
-  border-left: none;
-  background: #e1e1e1;
-}
-ul.tabs2 li a {
-  display: block;
-  padding: 0 20px;
-  color: #000;
-  border: 1px solid #fff;
-  text-decoration: none;
-}
-ul.tabs2 li a:hover {
-  background: #ccc;
-}
-ul.tabs2 li.active  {
-  background: #fff;
-  border-bottom: 1px solid#fff;
-}
-ul.tabs2 li.active a:hover {
-  background: #fff;
-}
 div.tab_container {
   clear: left;
   width: 100%;
@@ -230,8 +194,10 @@ div.tab_container {
   background: #fff;
 }
 div.tab_container .tab_content {
-  padding: 20px;
+  padding: 20px 0px 20px;
+  height:475px;
+  overflow: scroll;
 }
 div.tab_container .tab_content h2 {
-  margin: 0 0 20px;
+  margin: 0 0 0px;
 }

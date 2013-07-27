@@ -30,7 +30,7 @@ development:
   database: test
   host: localhost
   username: root
-  password: s9227056
+  password: aa913073
 
 test:
   adapter: mysql2
@@ -38,7 +38,7 @@ test:
   database: test
   host: localhost
   username: root
-  password: s9227056
+  password: aa913073
   
 production:
   adapter: mysql2
