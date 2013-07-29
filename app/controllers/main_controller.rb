@@ -10,6 +10,9 @@ class MainController < ApplicationController
   
   def profile
   end
+   
+  def chat
+  end
   
   def results
     

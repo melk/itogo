@@ -40,8 +40,7 @@ font-family: 'CenturyGothic', arial;
 }
 
 .center_column{
-  width:546px;
-  height:540px;
+   width:543px;
   padding:10px;
    float:left;
    border-left:1px;
@@ -51,13 +50,17 @@ font-family: 'CenturyGothic', arial;
 }
 
 .left_column{
-  width:190px;
+   width:20%;
   float:left;
+   font-size:13px;
+   line-height:18px;
+   
 }
 
 .right_column{
   margin-left:10px;
   float:left;
+  width:20%;
 }
 .profile_name{
    position: relative;
@@ -88,10 +91,19 @@ font-family: 'CenturyGothic', arial;
   background:#FF3333;
   }
 
-.vav_bar{
+.chat{
  margin-right:10px; 
+ 
 }
-
+.self_info{
+   background:#feffc3;
+   padding:10px;
+}
+.selfedit{
+  color:#747474;
+  font-size:13px;
+   border-top: 1px solid #999;
+}
 .result_photo{
   height:87px;
   width:87px;
@@ -131,6 +143,7 @@ z-index:0;
   font-size:50px;
   text-shadow:1px  1px  1px  #000000;
  font-family: 'Londrina Shadow', cursive;
+ text-decoration:none;
 }
 #user_nav img{
   width:200px;
@@ -142,16 +155,7 @@ ul, li {
   padding: 0;
   list-style: none;
 }
-.center_column {
-  width:546px;
-  height:540px;
-  padding:10px;
-   float:left;
-   border-left:1px;
-   border-left-style:solid;
-   border-right:1px;
-   border-right-style:solid;
-}
+
 ul.tabs {
   width: 100%;
   height: 32px;
@@ -200,4 +204,27 @@ div.tab_container .tab_content {
 }
 div.tab_container .tab_content h2 {
   margin: 0 0 0px;
+}
+.decoration
+{
+  text-decoration:none;
+  color:#747474;
+}
+.center_top
+{
+  width:100%;
+   background: #747474;
+ height:100px;
+}
+.center_center
+{
+  width:100%;
+   background: #616161;
+ height:300px;
+}
+.center_bottom
+{
+  width:100%;
+   background: #ff93c9;
+ height:100px;
 }

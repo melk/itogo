@@ -1,0 +1,66 @@
+<div class="top_title">
+	<div class="title_container">
+		<%= link_to "ITOGO","/main/home",id:"text2" %>
+		<div class="logout">
+			log out
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="left_column">
+		<div class="top_profile">
+			<%= image_tag("profile.jpg", :alt => "Norman Chen", :size => "70x70", :class => "profile_photo") %>
+			<div class="profile_name">
+				Norman Chen
+				<br>
+				Edit your profile
+			</div>
+		</div>
+		<div class="chat">
+			<div class="circle">
+				3
+			</div>
+			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration" %>
+		</div>
+
+		<div class='events'>
+			<%= image_tag("events.png", :alt => "chat") %><%= link_to "Events","/main/events",class:"decoration" %>
+		</div>
+		<div class="favorite">
+			<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="self_info">
+			練習自我介紹中，請勿打擾．
+			<br>
+			哥寫的不是程式．
+			<br>
+			哇嗚！！！
+			<br>
+			<div class="selfedit">
+				修改狀態
+			</div>
+		</div>
+	</div>
+	<div class="center_column">
+		<div class="center_top">
+		 	<%= image_tag("profile1.jpg", :class => "result_photo") %>
+		</div>
+		<div class="center_center">
+
+		</div>
+		<div class="center_bottom">
+
+		</div>
+	</div>
+	<div class="right_column">
+				<% for i in 1..20 %>
+				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
+				<% end %>	
+	</div>
+</div>
+

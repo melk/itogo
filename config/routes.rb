@@ -4,6 +4,9 @@ ToGo::Application.routes.draw do
   get "main/index"
   get "main/home"
   get "main/map"
+    get "main/chat"
+        get "main/events"
+            get "main/Myfavorite"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
