@@ -48,19 +48,49 @@
 	</div>
 	<div class="center_column">
 		<div class="center_top">
-		 	<%= image_tag("profile1.jpg", :class => "result_photo") %>
+			<div class="top_1">
+				<%= image_tag("profile1.jpg", :class => "result_photo1") %>
+			</div>
+			<div class="top_2">
+				姓名:Amay cheng
+				<br>
+				年齡:24
+				<br>
+				位置：新店
+				<br>
+				國家：台灣<br>
+			</div>
+			<div class="top_4">
+				關於我：<br> 
+				Call me Jo...22,Malaysia born Chinese ,dark hair,dark brown eye~ Friendly,happy go lucky,easy 
+			</div>
+			<div class="top_3">
+				加入最愛
+				<br>
+				刪除聊天
+				<br>
+				封鎖
+				<br>
+				檢舉
+				<br>
+			</div>
 		</div>
 		<div class="center_center">
-
+			<%= image_tag("chatpic.jpg", :class => "center_pic") %>
 		</div>
 		<div class="center_bottom">
-
+		<div><%= text_area(:comment, :text, size: "74x5", class: 'chat_input' ) %></div>
+		<div class="chat_bottom">
+				 <%= submit_tag("傳送圖片")%>
+				 	 <%= submit_tag("圖示選擇")%>
+			 <%= submit_tag("傳送訊息")%>
+		</div>
 		</div>
 	</div>
 	<div class="right_column">
-				<% for i in 1..20 %>
-				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
-				<% end %>	
+		<% for i in 1..20 %>
+		<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
+		<% end %>
 	</div>
 </div>
 
