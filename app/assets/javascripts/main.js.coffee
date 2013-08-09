@@ -6,7 +6,7 @@
 $ ->
   # 預設顯示第一個 Tab
   _showTab = 0
-  $centerDefaultLi = $(".center_column ul.tabs li").eq(_showTab).addClass("active")
+  $centerDefaultLi = $(".title_tabs ul.tabs li").eq(_showTab).addClass("active")
   $($centerDefaultLi.find("a").attr("href")).siblings().hide()
   
   $rightDefaultLi = $(".right_column ul.tabs li").eq(_showTab).addClass("active")
@@ -41,4 +41,5 @@ $ ->
     _clickTab = focusTab.find("a").attr("href")
     focusTab.addClass("active").siblings(".active").removeClass "active"
     $(_clickTab).stop(false, true).fadeIn().siblings().hide()
+    $(_clickTab + '2').stop(false, true).fadeIn().siblings().hide()
     false

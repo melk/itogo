@@ -1,7 +1,19 @@
 <%= javascript_include_tag "main" %>
 <div class="top_title">
 	<div class="title_container">
-		<%= link_to "ITOGO","/main/home",id:"text2" %>	
+		<div class="iToGo">
+			<%= link_to "ITOGO","/main/home",id:"text2" %>
+		</div>
+		<div class="title_tabs">
+			<ul class="tabs">
+				<li>
+					<a href="#tab1">people</a>
+				</li>
+				<li>
+					<a href="#tab2">events</a>
+				</li>
+			</ul>
+		</div>
 		<div class="logout">
 			log out
 		</div>
@@ -18,10 +30,10 @@
 			</div>
 		</div>
 		<div class="chat">
-				<div class="circle">
-					3
-				</div>
-			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration" %>	
+			<div class="circle">
+				3
+			</div>
+			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration" %>
 		</div>
 
 		<div class='events'>
@@ -36,23 +48,18 @@
 		<br>
 		<br>
 		<div class="self_info">
-		 練習自我介紹中，請勿打擾．<br>
-		 哥寫的不是程式．<br>
-		 哇嗚！！！<br>
-		 <div class="selfedit">
-		 修改狀態
-		 </div>
+			練習自我介紹中，請勿打擾．
+			<br>
+			哥寫的不是程式．
+			<br>
+			哇嗚！！！
+			<br>
+			<div class="selfedit">
+				修改狀態
+			</div>
 		</div>
 	</div>
 	<div class="center_column">
-		<ul class="tabs">
-			<li>
-				<a href="#tab1">people</a>
-			</li>
-			<li>
-				<a href="#tab2">events</a>
-			</li>
-		</ul>
 
 		<div class="tab_container">
 			<div id="tab1" class="tab_content">
@@ -63,32 +70,33 @@
 			<div id="tab2" class="tab_content">
 				<% for i in 1..10 %>
 				<div class="events_block">
-				<div class="events_pic"><%= image_tag("profile#{i%4}.jpg", :class => "result_events") %></div>
-				<div class="events_info">
-					Amay chang<br>
-					找一起出去玩的人<br>
-					時間:2013.03.03 人數：20人<br>
-				</div>
-				<div class="events_bottom">
-					 <%= submit_tag("詳情")%><br>
-				 	 <%= submit_tag("參加")%><br>
-				 	  <%= submit_tag("加入觀察")%><br>
-					
-				</div>
+					<div class="events_pic">
+						<%= image_tag("profile#{i%4}.jpg", :class => "result_events") %>
+					</div>
+					<div class="events_info">
+						Amay chang
+						<br>
+						找一起出去玩的人
+						<br>
+						時間:2013.03.03 人數：20人
+						<br>
+					</div>
+					<div class="events_bottom">
+						<%= submit_tag("詳情")%>
+						<br>
+						<%= submit_tag("參加")%>
+						<br>
+						<%= submit_tag("加入觀察")%>
+						<br>
+
+					</div>
 				</div>
 				<% end %>
 			</div>
 		</div>
 	</div>
 	<div class="right_column">
-		<ul class="tabs">
-			<li>
-				<a href="#tab12">people</a>
-			</li>
-			<li>
-				<a href="#tab22">events</a>
-			</li>
-		</ul>
+
 
 		<div class="tab_container">
 			<div id="tab12" class="tab_content">
