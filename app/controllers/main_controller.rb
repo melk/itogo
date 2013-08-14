@@ -7,14 +7,32 @@ class MainController < ApplicationController
 
   def map
   end
-  
+
   def profile
   end
-   
+
   def chat
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def results
+
+  end
+
+  def people
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
   
-  def results
-    
+  def event
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 end

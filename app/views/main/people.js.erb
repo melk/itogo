@@ -1,0 +1,6 @@
+$('.center_column .tab_container').html('<div class="tab_content">\
+				<% for i in 1..80 %>\
+				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>\
+				<% end %>
+			</div>');
+

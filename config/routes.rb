@@ -1,4 +1,6 @@
 ToGo::Application.routes.draw do
+  get "main/events"
+  get "main/people"
   get "main/profile"
   get "main/results"
   get "main/index"
