@@ -6,7 +6,8 @@
 $ ->
   # 預設顯示第一個 Tab
   _showTab = 0
-  $centerDefaultLi = $(".title_tabs ul.tabs li").eq(_showTab)
+  $centerDefaultLi = $(".title_tabs ul.tabs li a").eq(_showTab)
+  alert($centerDefaultLi.attr("class"))
   hideSiblings($centerDefaultLi)
   
   # 當 li 頁籤被點擊時...
@@ -22,7 +23,7 @@ $ ->
     $this = $(this)
     hideSiblings($this)
     ).find("a").focus ->
-      @blur()
+    @blur()
     
 hideSiblings = (focusTab) ->
     _clickTab = focusTab.find("a").attr("href")
