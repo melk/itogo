@@ -204,6 +204,10 @@ ul.tabs li.active  {
 ul.tabs li.active a:hover {
   background: #fff;
 }
+
+div.left_column div.active{
+  font-weight:bolder;
+}
 div.tab_container {
   clear: left;
   width: 100%;

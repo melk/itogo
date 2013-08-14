@@ -3,6 +3,8 @@ class MainController < ApplicationController
   end
 
   def home
+    render :home
+    
   end
 
   def map
