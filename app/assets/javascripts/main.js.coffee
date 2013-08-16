@@ -12,6 +12,10 @@ $ ->
   $(window).resize(->
     $('.dialog').css("margin-top", $(window).height()/2)
     )
+  $('#dialog_cancel.dialog_footer_button').click(->
+    dialog = $('.dialog_translucent_background')
+    dialog.remove()
+    )
   
   # 預設顯示第一個 Tab
   # _showTab = 0
