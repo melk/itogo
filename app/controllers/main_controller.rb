@@ -4,7 +4,7 @@ class MainController < ApplicationController
 
   def home
     render :home
-    
+
   end
 
   def map
@@ -30,8 +30,15 @@ class MainController < ApplicationController
       format.js
     end
   end
-  
+
   def event
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def new_event
     respond_to do |format|
       format.html
       format.js
