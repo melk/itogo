@@ -4,6 +4,11 @@
 
 
 $ ->
+  $('.dialog').css("margin-top", $(window).height()/2)
+  $(window).resize(->
+    $('.dialog').css("margin-top", $(window).height()/2)
+    )
+  
   # 預設顯示第一個 Tab
   # _showTab = 0
   # $centerDefaultLi = $(".title_tabs ul.tabs li").eq(_showTab)
