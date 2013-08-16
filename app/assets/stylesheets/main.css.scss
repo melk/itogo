@@ -10,11 +10,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-family: 'CenturyGothic', arial;
 }
 
+$common_title_background_color:#ff607a;
+
 .title_container {
 	width: 960px;
 	height: 59px;
 	margin: 0 auto;
-	background-color: #ff607a;
+	background-color: $common_title_background_color;
 	position: relative;
 }
 
@@ -22,7 +24,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	border-bottom: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #ffffff;
-	background-color: #ff607a;
+	background-color: $common_title_background_color;
 	float: left;
 	width: 100%;
 }
@@ -312,8 +314,32 @@ div.tab_container .tab_content h2 {
 	background-color: rgba(0,0,0,0.4);
 }
 
+$dialog_aroung_padding :5px;
 .dialog {
 	margin:0 auto;
 	width:445px;
 	background-color: #ffffff;
+}
+
+.dialog_title{
+	padding:$dialog_aroung_padding;
+	color:#F7F7F7;
+	background-color:$common_title_background_color;
+}
+
+.dialog_content{
+  padding:$dialog_aroung_padding;
+}
+
+.dialog_footer{
+  padding:$dialog_aroung_padding;
+  width:auto;
+  margin:0 auto;
+  height:100%;
+}
+.dialog_footer_button{
+  text-align:center;
+  float:right;
+  background-color:$common_title_background_color;
+  margin:$dialog_aroung_padding;
 }
