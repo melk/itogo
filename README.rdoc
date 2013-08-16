@@ -1,28 +1,102 @@
-== README
+iToGo: Stronger skout,Improve person search by 興趣. And make friends by events create.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Add a tab can switch event and person in the home page
+Chat room:
+purpose is for personal chat.
+Events:
+Layout the screen
+event how to handle
+一個人只能開五個Event
+How to create
 
-Things you may want to cover:
+what kind of information needed
+名稱
+描述
+地點
+時間
+類別	需要在思考一下
+隱私	公開，隱藏，授權
+性別
+年齡
+how to delete
+confirm
+how to edite
+privilege
+How Invite some one to this event?
+Type define:
+What kind of type we needed.
+Black List: Block the person you don’t like.
+Favorite: 
+Buzz:
 
-* Ruby version
+TODO:
+修改首頁
+增加Event and Person Tab
+新增Favorite
+新增Block List
+新增Event 管理
+規劃Database
+聊天室頁面規劃
+Event產生流程規劃
+搜尋項目細分
+Tab layout 設計
 
-* System dependencies
+7/30
+Events:
+如何審核預參加活動？
+活動留言查看權限設定．
+過去的event是否要保留？
+資料保留N個月
+可以設定參加性別
+People:
+可以設定目前想做的三個事情
+設定目前狀態：Busy, avaliable, offline
+Search:
+Same
+性別
+距離
+年齡
+People
+想做的事情
+狀態: avaliable, all
+Event
+Favorite
+People
+點選人，跳出聊天室窗
+Event
+點選event，跳出事件相關的東西
+TODO:
+修改首頁
+增加Event and Person Tab
+Event list
+people list
+新增Favorite
+可在分為people and favorite
+新增Block List
+新增Event 管理
+基本資料
+自介
+two tabs整合成一個tab
+規劃Database
+聊天室頁面規劃
+Event產生流程規劃
+搜尋項目細分
+Tab layout 設計
 
-* Configuration
 
-* Database creation
+8/15
+把右邊的搜尋列改放置到People/Event下方，右邊欄改放Hot list.
+Create Event Dialog
+Event detail
+基本資訊：主辦人．活動照片．人員，地點，時間，描述
+討論串
+審核成員
+People detail
+基本資訊：
+狀態
+帳號資訊
+上傳照片
+更改暱稱
+自我介紹編輯
+	
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
