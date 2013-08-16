@@ -306,3 +306,14 @@ div.tab_container .tab_content h2 {
   float:right;
   color:#747474;
 }
+
+.event_new{
+  float:right;
+  margin-right:10px;
+  margin-bottom:10px;
+  text-decoration:none;
+}
+
+.event_new:hover {
+  background: #ccc;
+}
