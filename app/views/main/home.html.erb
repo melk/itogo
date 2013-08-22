@@ -5,14 +5,14 @@
 			<%= link_to "iTOGO","/main/home",id:"text2" %>
 		</div>
 		<!-- <div class="title_tabs">
-			<ul class="tabs">
-				<li id="people">
-					<%= link_to "people", '/main/people', :remote => true, "data-type" => "script" %>
-				</li>
-				<li id="events">
-					<%= link_to "event", '/main/events', :remote => true, "data-type" => "script" %>
-				</li>
-			</ul>
+		<ul class="tabs">
+		<li id="people">
+		<%= link_to "people", '/main/people', :remote => true, "data-type" => "script" %>
+		</li>
+		<li id="events">
+		<%= link_to "event", '/main/events', :remote => true, "data-type" => "script" %>
+		</li>
+		</ul>
 		</div> -->
 		<div class="logout">
 			log out
@@ -42,7 +42,6 @@
 			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration", :remote => true, "data-type" => "script"%>
 		</div>
 
-
 		<div class="favorite">
 			<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
 		</div>
@@ -67,9 +66,33 @@
 
 		<div class="tab_container">
 			<div class="tab_content">
-				<% for i in 1..80 %>
+					<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
+					<% for i in 1..10 %>
+					<div class="events_block">
+						<div class="events_pic">
+							<%= image_tag("profile#{i%4}.jpg", :class => "result_events",) %>
+						</div>
+						<div class="events_info">
+							Amay chang
+							<br>
+							找一起出去玩的人
+							<br>
+							時間:2013.03.03 人數：20人
+							<br>
+						</div>
+						<div class="events_bottom">
+							<%= submit_tag("詳情")%>
+							<br>
+							<%= submit_tag("參加")%>
+							<br>
+							<%= submit_tag("加入觀察")%>
+							<br>
+						</div>
+					</div>
+					<% end %>
+				<!-- <% for i in 1..80 %>
 				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
-				<% end %>
+				<% end %> -->
 			</div>
 		</div>
 	</div>

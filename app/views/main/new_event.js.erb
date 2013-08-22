@@ -1,0 +1,60 @@
+$('body').append('<div class="dialog_translucent_background">\
+	<div class="dialog">\
+		<div class="dialog_title">\
+			New Event\
+		</div>\
+		<div class="dialog_content">\
+			<%= form_tag do %>\
+			<table class="uiInfoTable">\
+				<tr>\
+					<th class="dialg_label"> <%= label_tag :q, "Name:" %></th><td>\
+					<div style="width: 100%;">\
+						<%= text_field_tag :q, nil, :class => "dialog_data" %>\
+					</div></td>\
+				</tr>\
+				<tr>\
+					<th class="dialg_label"><%= label_tag :q, "Description:" %></th>\
+					<div style="width: 100%;">\
+						<td> <textarea class="dialog_data" id="q" name="q"></textarea> </td>\
+					</div>\
+				</tr>\
+				<tr>\
+					<th class="dialg_label"> <%= label_tag :q, "Where" %></th>\
+					<div style="width: 100%;">\
+						<td> <%= text_field_tag :q,nil, :class => "dialog_data" %> </td>\
+					</div>\
+				</tr>\
+				<tr>\
+					<th class="dialg_label"> <%= label_tag :q, "Date" %></th>\
+						<td> <%= text_field_tag :q %>\
+						<%= text_field_tag :q %> </td>\
+				</tr>\
+				<tr>\
+					<th class="dialg_label"> <%= label_tag :q, "Privacy" %></th><td> <select id="q_city" name="q[city]"><option value="1">Lisbon</option><option value="2">Madrid</option></select> </td>\
+				</tr>\
+			</table>\
+		</div>\
+		<div class="dialog_footer">\
+			<table>\
+				<tr>\
+					<td> <%= submit_tag "Save", :class=> "dialog_footer_button"%>\
+					<% end %> </td>\
+					<td>\
+					<div id="dialog_cancel" style="margin-left: 0px" class="dialog_footer_button">\
+						Cancel\
+					</div></td>\
+				</tr>\
+			</table>\
+		</div>\
+	</div>\
+</div>')
+
+
+$('.dialog').css("margin-top", ($(window).height() - $('.dialog').height()) / 2);
+$('#dialog_cancel.dialog_footer_button').click(function() {
+      var dialog;
+      dialog = $('.dialog_translucent_background');
+      return dialog.remove();
+    });
+
+
