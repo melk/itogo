@@ -7,28 +7,38 @@
 			<%= form_tag do %>
 			<table class="uiInfoTable">
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Name:" %></th><td> <%= text_field_tag :q, nil, :class => "dialog_data" %> </td>
+					<th class="dialg_label"> <%= label_tag :q, "Name:" %></th><td>
+					<div style="width: 100%;">
+						<%= text_field_tag :q, nil, :class => "dialog_data" %>
+					</div></td>
 				</tr>
 
 				<tr>
-					<th class="dialg_label"><%= label_tag :q, "Description:" %></th><td> <%= text_area_tag :q, nil, :class => "dialog_data" %> </td>
+					<th class="dialg_label"><%= label_tag :q, "Description:" %></th>
+					<div style="width: 100%;">
+						<td> <%= text_area_tag :q, nil, :class => "dialog_data" %> </td>
+					</div>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Location" %></th><td> <%= text_field_tag :q,nil, :class => "dialog_data" %> </td>
+					<th class="dialg_label"> <%= label_tag :q, "Where" %></th>
+					<div style="width: 100%;">
+						<td> <%= text_field_tag :q,nil, :class => "dialog_data" %> </td>
+					</div>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Date" %></th><td> <%= text_field_tag(:q) %>
-					<%= text_field_tag(:q) %> </td>
+					<th class="dialg_label"> <%= label_tag :q, "Date" %></th>
+						<td> <%= text_field_tag :q %>
+						<%= text_field_tag :q %> </td>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Privacy" %></th><td> <%= select :q, :city, [['Lisbon', 1], ['Madrid', 2]] %> </td>
+					<th class="dialg_label"> <%= label_tag :q, "Privacy" %></th><td> <%= select :q, :city, [['Lisbon', 1], ['Madrid', 2]], :class => "dialog_data" %> </td>
 				</tr>
 			</table>
 		</div>
 		<div class="dialog_footer">
 			<table>
 				<tr>
-					<td> <%= submit_tag "Search", :class=> "dialog_footer_button"%>
+					<td> <%= submit_tag "Save", :class=> "dialog_footer_button"%>
 					<% end %> </td>
 					<td>
 					<div style="margin-left: 0px" class="dialog_footer_button">
