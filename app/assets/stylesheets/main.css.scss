@@ -10,21 +10,22 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	font-family: 'CenturyGothic', arial;
 }
 
+$common_title_background_color:#ff607a;
+$center_contain_width:543px;
+
 .title_container {
 	width: 960px;
 	height: 30px;
 	margin: 0 auto;
-	background-color: #ff607a;
+	background-color: $common_title_background_color;
 	position: relative;
 }
 
 .top_title {
-	border-bottom: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ffffff;
-	background-color: #ff607a;
-	float: left;
-	width: 100%;
+  z-index:9999;
+  position: fixed !important;
+  width: 100%;
+  background-color: #ff607a
 }
 
 .title_tabs {
@@ -51,7 +52,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .center_column {
-	width: 543px;
+	width: $center_contain_width;
 	padding: 10px;
 	float: left;
 	border-left: 1px;
@@ -68,9 +69,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .right_column {
-	margin-left: 10px;
+	padding:10px;
 	float: left;
-	width: 20%;
 }
 .profile_name {
 	position: relative;
@@ -91,22 +91,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 .circle {
-	float: right;
-	width: 18px;
-	height: 18px;
+  padding:2px 5px 2px;
 	border-radius: 40px;
 	font-size: 1.0em;
-	color: #fff;
-	text-align: center;
-	background: #FF3333;
 }
 
 .chat {
 	margin-right: 10px;
 }
-.self_info {
+.tags {
 	background: #feffc3;
 	padding: 10px;
+}
+
+.tag{
+  background:$common_title_background_color; 
 }
 .selfedit {
 	color: #747474;
@@ -209,13 +208,10 @@ div.tab_container {
 	width: 100%;
 	border-top: none;
 	background: #fff;
-	padding: 20px 0px 20px;
-	height: 475px;
-	overflow: scroll;
+	padding: 0px 0px 20px;
 }
 div.tab_container .tab_content {
-	padding: 20px 0px 20px;
-	height: 475px;
+	padding: 0px 0px 20px;
 	overflow: scroll;
 }
 div.tab_container .tab_content h2 {
@@ -259,7 +255,7 @@ div.tab_container .tab_content h2 {
 }
 .chat_input {
 	height: auto;
-	width: 543px;
+	width: $center_contain_width;
 }
 .chat_bottom {
 	float: right;
@@ -292,8 +288,6 @@ div.tab_container .tab_content h2 {
 
 .event_new {
 	float: right;
-	margin-right: 10px;
-	margin-bottom: 10px;
 	text-decoration: none;
 }
 
@@ -311,11 +305,13 @@ div.tab_container .tab_content h2 {
 	background-color: rgba(0,0,0,0.4);
 }
 
+$dialog_aroung_padding :5px;
 .dialog {
 	margin:0 auto;
 	width:445px;
 	background-color: #ffffff;
 }
+
 #index_footer{
  
   padding: 5px;
@@ -333,4 +329,49 @@ div.tab_container .tab_content h2 {
 .profile {
   text-decoration: none;
   color: #747474;
+}
+
+.dialog_title{
+	padding:$dialog_aroung_padding;
+	color:#F7F7F7;
+	background-color:$common_title_background_color;
+}
+
+.dialog_content{
+  padding:$dialog_aroung_padding;
+}
+
+.dialog_footer{
+  border-top: 1px;
+  border-top-color:$common_title_background_color;
+  border-top-style: solid;
+  padding:$dialog_aroung_padding;
+  width:auto;
+  margin:0 auto;
+  height:100%;
+}
+.dialog_footer_button{
+  text-align:center;
+  float:right;
+  background-color:$common_title_background_color;
+  margin:$dialog_aroung_padding;
+}
+
+.dialg_label{
+  color: #666;
+  font-weight: bold;
+  padding-right: 10px;
+  text-align: right;
+}
+
+.dialog_data{
+  width:95%;
+}
+
+.uiInfoTable {
+border: 0;
+border-collapse: collapse;
+border-spacing: 0;
+width: 100%;
+
 }

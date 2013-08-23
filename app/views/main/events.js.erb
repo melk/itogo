@@ -1,5 +1,5 @@
 $('.center_column .tab_container').html('<div class="tab_content">\
-	<%= link_to "New Event", '/main/new_event', :class =>'event_new' %>\
+	<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>\
 				<% for i in 1..10 %>\
 				<div class="events_block">\
 					<div class="events_pic">\

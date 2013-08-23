@@ -4,6 +4,7 @@ ToGo::Application.routes.draw do
   #set home
   get "main/home"
   #set events
+  get 'events/event'
   get 'main/new_event'
   get "main/events"
   get "main/people"

@@ -1,14 +1,3 @@
-<%= javascript_include_tag "main" %>
-<div class="top_title">
-	<div class="title_container">
-		<div class="iToGo">
-			<%= link_to "iTOGO","/main/home",id:"text2" %>
-		</div>
-		<div class="logout">
-			log out
-		</div>
-	</div>
-</div>
 <div class="container">
 	<div class="left_column">
 		<div class="top_profile">
@@ -19,52 +8,57 @@
 				<%= link_to "Edit your profile","/main/profile",class:"decoration", :remote => true, "data-type" => "script" %>
 			</div>
 		</div>
-		<div class="people active">
-			<%= image_tag("events.png", :alt => "chat") %><%= link_to "People","/main/people",class:"decoration", :remote => true, "data-type" => "script" %>
+		<!-- <div class="people">
+		<%= image_tag("events.png", :alt => "chat") %><%= link_to "People","/main/people",class:"decoration", :remote => true, "data-type" => "script" %>
+		</div> -->
+		<!-- <div class='events active' id="events">
+		<%= image_tag("events.png", :alt => "chat") %><%= link_to "Events","/main/events",class:"decoration", :remote => true, "data-type" => "script" %>
+		</div> -->
+		<!-- <div class="chat">
+		<div class="circle">
+		3
 		</div>
-		<div class='events' id="events">
-			<%= image_tag("events.png", :alt => "chat") %><%= link_to "Events","/main/events",class:"decoration", :remote => true, "data-type" => "script" %>
-		</div>
-		<div class="chat">
-			<div class="circle">
-				3
-			</div>
-			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration", :remote => true, "data-type" => "script"%>
-		</div>
+		<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration", :remote => true, "data-type" => "script"%>
+		</div> -->
 
-
-		<div class="favorite">
-			<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
-		</div>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="self_info">
-			練習自我介紹中，請勿打擾．
-			<br>
-			哥寫的不是程式．
-			<br>
-			哇嗚！！！
-			<br>
-			<div class="selfedit">
-				修改狀態
-			</div>
+		<!-- <div class="favorite">
+		<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
+		</div> -->
+		<div class="tags">
+			<% for i in 1..30 %>
+			<%= link_to "#Sport #{i*11}", '/events/event/', :class => 'circle tag' %>
+			<% end %>
 		</div>
 	</div>
 	<div class="center_column">
-
 		<div class="tab_container">
 			<div class="tab_content">
-				<% for i in 1..80 %>
-				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
+				<% for i in 1..10 %>
+				<div class="events_block">
+					<div class="events_pic">
+						<%= image_tag("profile#{i%4}.jpg", :class => "result_events",) %>
+					</div>
+					<div class="events_info">
+						Amay chang
+						<br>
+						找一起出去玩的人
+						<br>
+						時間:2013.03.03 人數：20人
+						<br>
+					</div>
+					<div class="events_bottom">
+						<%= link_to 'Detail', '/events/event/' %>
+						<br>
+						<%= submit_tag("參加")%>
+						<br>
+						<%= submit_tag("加入觀察")%>
+						<br>
+					</div>
+				</div>
 				<% end %>
 			</div>
 		</div>
 	</div>
-	<div class="right_column">
-	
-	</div>
+	<div class="right_column"></div>
 </div>
 
