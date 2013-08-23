@@ -1,10 +1,10 @@
 <%= javascript_include_tag "main" %>
-<div class="top_title">
+<!-- <div class="top_title">
 	<div class="title_container">
 		<div class="iToGo">
 			<%= link_to "iTOGO","/main/home",id:"text2" %>
 		</div>
-		<!-- <div class="title_tabs">
+		<div class="title_tabs">
 		<ul class="tabs">
 		<li id="people">
 		<%= link_to "people", '/main/people', :remote => true, "data-type" => "script" %>
@@ -13,7 +13,7 @@
 		<%= link_to "event", '/main/events', :remote => true, "data-type" => "script" %>
 		</li>
 		</ul>
-		</div> -->
+		</div>
 		<div style="float: left;margin-top: 20px;width: 543px;margin-left: 10px;margin-right: 10px;text-align: right;">
 			<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
 		</div>
@@ -21,7 +21,7 @@
 			log out
 		</div>
 	</div>
-</div>
+</div> -->
 <div class="container">
 	<div class="left_column">
 		<div class="top_profile">
@@ -32,22 +32,22 @@
 				Edit your profile
 			</div>
 		</div>
-		<div class="people">
+		<!-- <div class="people">
 			<%= image_tag("events.png", :alt => "chat") %><%= link_to "People","/main/people",class:"decoration", :remote => true, "data-type" => "script" %>
-		</div>
-		<div class='events active' id="events">
+		</div> -->
+		<!-- <div class='events active' id="events">
 			<%= image_tag("events.png", :alt => "chat") %><%= link_to "Events","/main/events",class:"decoration", :remote => true, "data-type" => "script" %>
-		</div>
-		<div class="chat">
+		</div> -->
+		<!-- <div class="chat">
 			<div class="circle">
 				3
 			</div>
 			<%= image_tag("iconChat.png", :alt => "chat") %> <%= link_to "Chat","/main/chat",class:"decoration", :remote => true, "data-type" => "script"%>
-		</div>
+		</div> -->
 
-		<div class="favorite">
+		<!-- <div class="favorite">
 			<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
-		</div>
+		</div> -->
 		<br>
 		<br>
 		<br>
@@ -83,7 +83,8 @@
 						<br>
 					</div>
 					<div class="events_bottom">
-						<%= submit_tag("詳情")%>
+						<!-- <%= submit_tag("詳情")%> -->
+						<%= link_to 'Detail', '/events/event/' %>
 						<br>
 						<%= submit_tag("參加")%>
 						<br>

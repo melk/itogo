@@ -12,6 +12,20 @@
 </head>
 <body>
 
+<div class="top_title">
+	<div class="title_container">
+		<div class="iToGo">
+			<%= link_to "iTOGO","/main/home",id:"text2" %>
+		</div>
+		<div style="float: left;margin-top: 20px;width: 543px;margin-left: 10px;margin-right: 10px;text-align: right;">
+			<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
+		</div>
+		<div style=";margin-top: 20px;" class="logout">
+			log out
+		</div>
+	</div>
+</div>
+
 <%= yield %>
 
 </body>
