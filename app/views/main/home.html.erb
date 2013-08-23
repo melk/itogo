@@ -1,26 +1,3 @@
-<%= javascript_include_tag "main" %> <!-- <div class="top_title">
-<div class="title_container">
-<div class="iToGo">
-<%= link_to "iTOGO","/main/home",id:"text2" %>
-</div>
-<div class="title_tabs">
-<ul class="tabs">
-<li id="people">
-<%= link_to "people", '/main/people', :remote => true, "data-type" => "script" %>
-</li>
-<li id="events">
-<%= link_to "event", '/main/events', :remote => true, "data-type" => "script" %>
-</li>
-</ul>
-</div>
-<div style="float: left;margin-top: 20px;width: 543px;margin-left: 10px;margin-right: 10px;text-align: right;">
-<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
-</div>
-<div style=";margin-top: 20px;" class="logout">
-log out
-</div>
-</div>
-</div> -->
 <div class="container">
 	<div class="left_column">
 		<div class="top_profile">
@@ -47,21 +24,10 @@ log out
 		<!-- <div class="favorite">
 		<%= image_tag("fav.png", :alt => "chat") %><%= link_to "My favorite","/main/Myfavorite",class:"decoration" %>
 		</div> -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<div class="self_info">
-			練習自我介紹中，請勿打擾．
-			<br>
-			哥寫的不是程式．
-			<br>
-			哇嗚！！！
-			<br>
-			<div class="selfedit">
-				修改狀態
-			</div>
+		<div class="tags">
+			<% for i in 1..30 %>
+			<%= link_to "#Sport #{i*11}", '/events/event/', :class => 'circle tag' %>
+			<% end %>
 		</div>
 	</div>
 	<div class="center_column">
@@ -81,7 +47,6 @@ log out
 						<br>
 					</div>
 					<div class="events_bottom">
-						<!-- <%= submit_tag("詳情")%> -->
 						<%= link_to 'Detail', '/events/event/' %>
 						<br>
 						<%= submit_tag("參加")%>
@@ -91,29 +56,10 @@ log out
 					</div>
 				</div>
 				<% end %>
-				<!-- <% for i in 1..80 %>
-				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
-				<% end %> -->
 			</div>
 		</div>
 	</div>
 	<div class="right_column">
-		<div class="tab_container">
-			<div id="tab1" class="tab_content">
-				<div>
-					Travel
-				</div>
-				<div>
-					Sport
-				</div>
-				<div>
-					Food
-				</div>
-				<div>
-					Club
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
 
