@@ -14,7 +14,10 @@
 		</li>
 		</ul>
 		</div> -->
-		<div class="logout">
+		<div style="float: left;margin-top: 20px;width: 543px;margin-left: 10px;margin-right: 10px;text-align: right;">
+			<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
+		</div>
+		<div style=";margin-top: 20px;" class="logout">
 			log out
 		</div>
 	</div>
@@ -29,10 +32,10 @@
 				Edit your profile
 			</div>
 		</div>
-		<div class="people active">
+		<div class="people">
 			<%= image_tag("events.png", :alt => "chat") %><%= link_to "People","/main/people",class:"decoration", :remote => true, "data-type" => "script" %>
 		</div>
-		<div class='events' id="events">
+		<div class='events active' id="events">
 			<%= image_tag("events.png", :alt => "chat") %><%= link_to "Events","/main/events",class:"decoration", :remote => true, "data-type" => "script" %>
 		</div>
 		<div class="chat">
@@ -66,30 +69,29 @@
 
 		<div class="tab_container">
 			<div class="tab_content">
-					<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
-					<% for i in 1..10 %>
-					<div class="events_block">
-						<div class="events_pic">
-							<%= image_tag("profile#{i%4}.jpg", :class => "result_events",) %>
-						</div>
-						<div class="events_info">
-							Amay chang
-							<br>
-							找一起出去玩的人
-							<br>
-							時間:2013.03.03 人數：20人
-							<br>
-						</div>
-						<div class="events_bottom">
-							<%= submit_tag("詳情")%>
-							<br>
-							<%= submit_tag("參加")%>
-							<br>
-							<%= submit_tag("加入觀察")%>
-							<br>
-						</div>
+				<% for i in 1..10 %>
+				<div class="events_block">
+					<div class="events_pic">
+						<%= image_tag("profile#{i%4}.jpg", :class => "result_events",) %>
 					</div>
-					<% end %>
+					<div class="events_info">
+						Amay chang
+						<br>
+						找一起出去玩的人
+						<br>
+						時間:2013.03.03 人數：20人
+						<br>
+					</div>
+					<div class="events_bottom">
+						<%= submit_tag("詳情")%>
+						<br>
+						<%= submit_tag("參加")%>
+						<br>
+						<%= submit_tag("加入觀察")%>
+						<br>
+					</div>
+				</div>
+				<% end %>
 				<!-- <% for i in 1..80 %>
 				<%= image_tag("profile#{i%4}.jpg", :class => "result_photo") %>
 				<% end %> -->

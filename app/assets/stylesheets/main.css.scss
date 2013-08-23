@@ -11,6 +11,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 $common_title_background_color:#ff607a;
+$center_contain_width:543px;
 
 .title_container {
 	width: 960px;
@@ -53,7 +54,7 @@ $common_title_background_color:#ff607a;
 }
 
 .center_column {
-	width: 543px;
+	width: $center_contain_width;
 	padding: 10px;
 	float: left;
 	border-left: 1px;
@@ -70,9 +71,8 @@ $common_title_background_color:#ff607a;
 }
 
 .right_column {
-	margin-left: 10px;
+	padding:10px;
 	float: left;
-	width: 20%;
 }
 .profile_name {
 	position: relative;
@@ -212,12 +212,12 @@ div.tab_container {
 	width: 100%;
 	border-top: none;
 	background: #fff;
-	padding: 20px 0px 20px;
+	padding: 0px 0px 20px;
 	height: 475px;
 	overflow: scroll;
 }
 div.tab_container .tab_content {
-	padding: 20px 0px 20px;
+	padding: 0px 0px 20px;
 	height: 475px;
 	overflow: scroll;
 }
@@ -262,7 +262,7 @@ div.tab_container .tab_content h2 {
 }
 .chat_input {
 	height: auto;
-	width: 543px;
+	width: $center_contain_width;
 }
 .chat_bottom {
 	float: right;
@@ -295,8 +295,6 @@ div.tab_container .tab_content h2 {
 
 .event_new {
 	float: right;
-	margin-right: 10px;
-	margin-bottom: 10px;
 	text-decoration: none;
 }
 
