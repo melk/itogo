@@ -4,16 +4,6 @@
 		<div class="iToGo">
 			<%= link_to "iTOGO","/main/home",id:"text2" %>
 		</div>
-		<!-- <div class="title_tabs">
-			<ul class="tabs">
-				<li id="people">
-					<%= link_to "people", '/main/people', :remote => true, "data-type" => "script" %>
-				</li>
-				<li id="events">
-					<%= link_to "event", '/main/events', :remote => true, "data-type" => "script" %>
-				</li>
-			</ul>
-		</div> -->
 		<div class="logout">
 			log out
 		</div>
@@ -26,7 +16,7 @@
 			<div class="profile_name">
 				Norman Chen
 				<br>
-				Edit your profile
+				<%= link_to "Edit your profile","/main/profile",class:"decoration", :remote => true, "data-type" => "script" %>
 			</div>
 		</div>
 		<div class="people active">
@@ -74,25 +64,7 @@
 		</div>
 	</div>
 	<div class="right_column">
-		<div class="tab_container">
-			<div id="tab1" class="tab_content">
-				<div>
-					Travel
-				</div>
-				<div>
-					Sport
-				</div>
-				<div>
-					Food
-				</div>
-				<div>
-					Club
-				</div>
-			</div>
-			<div id="tab2" class="tab_content">
-				<h2>jQuery ind </h2>
-			</div>
-		</div>
+	
 	</div>
 </div>
 

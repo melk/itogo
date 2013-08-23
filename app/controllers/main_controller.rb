@@ -4,13 +4,16 @@ class MainController < ApplicationController
 
   def home
     render :home
-
   end
 
   def map
   end
 
   def profile
+   respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def chat
