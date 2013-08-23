@@ -12,7 +12,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .title_container {
 	width: 960px;
-	height: 59px;
+	height: 30px;
 	margin: 0 auto;
 	background-color: #ff607a;
 	position: relative;
@@ -137,7 +137,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 #user_nav {
 	position: relative;
 	padding: 10px;
-	border-radius: 5px;
 	margin-top: 20%;
 	background-color: rgba(255,96,122,0.5);
 	color: #ffffff;
@@ -153,7 +152,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 #text2 {
 	color: #ffffff;
-	font-size: 50px;
+	font-size: 26px;
 	text-shadow: 1px 1px 1px #000000;
 	font-family: 'Londrina Shadow', cursive;
 	text-decoration: none;
@@ -316,4 +315,22 @@ div.tab_container .tab_content h2 {
 	margin:0 auto;
 	width:445px;
 	background-color: #ffffff;
+}
+#index_footer{
+ 
+  padding: 5px;
+  width:250px;
+  position: fixed;
+  bottom: 0;
+  left:40%;
+  background-color: rgba(255,96,122,0.5);
+  color: #ffffff;
+  font-size: 10px;
+  text-align: center;
+  font-family: 'arial';
+
+}
+.profile {
+  text-decoration: none;
+  color: #747474;
 }

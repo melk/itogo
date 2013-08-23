@@ -1,15 +1,18 @@
 ToGo::Application.routes.draw do
+  #select start root
+  root :to => "main#index"
+  #set home
+  get "main/home"
+  #set events
   get 'main/new_event'
   get "main/events"
   get "main/people"
   get "main/profile"
   get "main/results"
-  get "main/index"
-  get "main/home"
   get "main/map"
-    get "main/chat"
-        get "main/events"
-            get "main/Myfavorite"
+  get "main/chat"
+  get "main/events"
+  get "main/Myfavorite"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
