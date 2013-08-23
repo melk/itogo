@@ -22,12 +22,10 @@ $center_contain_width:543px;
 }
 
 .top_title {
-	border-bottom: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #ffffff;
-	background-color: $common_title_background_color;
-	float: left;
-	width: 100%;
+  z-index:9999;
+  position: fixed !important;
+  width: 100%;
+  background-color: #ff607a
 }
 
 .title_tabs {
@@ -93,22 +91,21 @@ $center_contain_width:543px;
 }
 
 .circle {
-	float: right;
-	width: 18px;
-	height: 18px;
+  padding:2px 5px 2px;
 	border-radius: 40px;
 	font-size: 1.0em;
-	color: #fff;
-	text-align: center;
-	background: #FF3333;
 }
 
 .chat {
 	margin-right: 10px;
 }
-.self_info {
+.tags {
 	background: #feffc3;
 	padding: 10px;
+}
+
+.tag{
+  background:$common_title_background_color; 
 }
 .selfedit {
 	color: #747474;
@@ -213,12 +210,9 @@ div.tab_container {
 	border-top: none;
 	background: #fff;
 	padding: 0px 0px 20px;
-	height: 475px;
-	overflow: scroll;
 }
 div.tab_container .tab_content {
 	padding: 0px 0px 20px;
-	height: 475px;
 	overflow: scroll;
 }
 div.tab_container .tab_content h2 {
