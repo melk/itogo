@@ -1,4 +1,5 @@
 ToGo::Application.routes.draw do
+ devise_for :users, :controllers => { :sessions => "sessions" }
   #select start root
   root :to => "main#index"
   #set home
