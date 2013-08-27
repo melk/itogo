@@ -5,7 +5,9 @@
 			<%= link_to "iTOGO","/main/home",id:"text2" %>
 		</div>
 		<div class="logout">
-			log out
+				<% if current_user %> welcome ,<%= current_user.email =%>
+			<%= link_to('登出', destroy_user_session_path, :method => :delete) %>
+			<% end %>
 		</div>
 	</div>
 </div>
