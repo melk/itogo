@@ -5,7 +5,7 @@
 		<div id="sing_in_openid">
 			使用快速登入．ITOGO不會公佈您任何資訊．
 			<br>
-			<%= link_to image_tag("fblogin.jpg", :border => 0)%>
+			<%= link_to image_tag("fblogin.jpg", :border => 0), user_omniauth_authorize_path(:facebook) %>
 			<%= link_to image_tag("googlelogin.jpg", :border => 0)%>
 		</div>
 		<div id="sing_in">
