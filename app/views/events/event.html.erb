@@ -1,3 +1,137 @@
-<div style="position: relative">
-	Event
+<%= render partial: "/main/title" %>
+<div style="width: 960px;margin:auto;padding: 10px">
+	<div>
+		<div style="margin: 5px;">
+			<%= link_to "<=back", "/main/home/" %>
+		</div>
+		<div style="font-size: 25px">
+			Let Go Surfing <a href="/main/events/" style="font-size: 14px;" class="circle tag">#Surfing</a>
+			<a href="/main/events/" style="font-size: 14px;" class="circle tag">#Sport</a>
+		</div>
+		<div>
+			invided by Norman
+		</div>
+	</div>
+	<div>
+		<div style="width: 192px; float: left;margin-top: 10px;height:100%">
+			<div style="border-top: 1px solid #999;">
+				Goging
+				<div style="padding-left: 10px;">
+					<div>
+						Norman
+					</div>
+					<div>
+						A-man
+					</div>
+				</div>
+			</div>
+			<div style="border-top: 1px solid #999;">
+				Maybe
+				<div style="padding-left: 10px;">
+					<div>
+						Norman
+					</div>
+					<div>
+						A-man
+					</div>
+				</div>
+			</div>
+			<div style="border-top: 1px solid #999;">
+				Invided
+				<div style="padding-left: 10px;">
+					<div>
+						Norman
+					</div>
+					<div>
+						A-man
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="float: left;margin-top: 10px;border-left: 1px solid #999;border-top:1px solid #999;">
+			<div style="width: 513px">
+				<ul style="padding: 10px 10px 0px;">
+					<li style="height: 28px;border-bottom: 1px solid #999;">
+						<ul>
+							<li>
+								<div style="zoom: 1;float: left; font-size: 13px;margin-right: 20px;">
+									<img style="vertical-align:text-top;" src="https://fbstatic-a.akamaihd.net/rsrc.php/v2/yJ/r/UmLbGfwEuH6.png" title="When" width="16" height="16">
+									<a href="/events/calendar/2013/September/9" style="text-decoration: none;">Monday, September 9, 2013</a>
+								</div>
+							</li>
+							<li>
+								<div style="zoom: 1;float: left; font-size: 13px;margin-right: 20px;border-left: 1px solid #999; padding-left: 10px;">
+									<img style="vertical-align:text-top;" src="https://fbstatic-a.akamaihd.net/rsrc.php/v2/y0/r/MY8128-Z6ed.png" title="Time" width="16" height="16">
+									<a href="/ajax/events/edit_form.php?fbid=304759993001019&amp;focus=time" style="text-decoration: none;">What time?</a>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li style="margin-top: 10px;">
+						<table>
+							<tr>
+								<td> #aksdjflkasjdfkjl </td>
+							</tr>
+						</table>
+					</li>
+				</ul>
+				<div style="float: left;position: relative;margin-top: 10px;border-bottom:1px solid #999;">
+					<div style="padding: 0px 10px 10px;">
+						<img alt="Norman Chen" src="/assets/map.jpg">
+						<div style="position: absolute;top: 50px;width: 503px;">
+							<div style="margin: auto;width: 340px;position: relative;margin: auto;">
+								<input id="q" name="q" type="text" style="width: 100%">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="margin-left: 10px;margin-top:10px;border-bottom; 1px solid #999;">
+				<ul>
+					<li>
+						<div style="float: left;margin-right: 20px;font-size: 13px;margin-top: 10px;">
+							<a href="#123">Write Post</a>
+						</div>
+					</li>
+					<li>
+						<div style="float: left;margin-right: 20px;font-size: 13px;margin-top: 10px;">
+							<a href="#123">Add Photo / Video</a>
+						</div>
+					</li>
+					<li>
+						<div style="float: left;margin-right: 20px;font-size: 13px;;margin-top: 10px;">
+							<a href="#123">Ask Question</a>
+						</div>
+					</li>
+					<li>
+						<textarea id="q" name="q" type="text" style="width: 95%;overflow: hidden;resize: none;height: 16px;margin-top: 10px;">
+					</textarea>
+					</li>
+				</ul>
+
+				<ul style="vertical-align: text-top;">
+					<% for i in 1..10 %>
+					<li style="font-size: 18px;margin-top: 10px;border-top: 1px solid #999; padding-top:5px">
+						<img alt="Profile" src="/assets/profile.jpg" style="height: 20px; float:left;">
+						<div style="font-size: 13px;margin-left: 25px;">
+							<a href="#Norman_Chen">Norman Chen</a>
+							<div style="margin: 10px 0px 10px;">
+								ajsdlkfjlksajfdkljlfajshdfajslfdjllasjdlkfjlkajfl
+								<br>
+								jalskdjfklajsdlfajsdkfl
+							</div>
+							<span style="font-size: 11px;"> <span> Like </span> <span>Comment</span> <span>Unfollow</span> <span> <%= Time.current() %></span></span>
+						</div>
+					</li>
+					<% end %>
+				</ul>
+
+			</div>
+		</div>
+		<div style="clear: both;padding: 0 20px 12px;"></div>
+		<div style="width: 100%;border-top: 1px solid #999;">
+			We love here.
+		</div>
+	</div>
 </div>
+
