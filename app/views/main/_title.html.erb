@@ -1,3 +1,5 @@
+<%= javascript_include_tag "dialog", "data-turbolinks-track" => true %>
+
 <div style="height: 30px;">
 	<div class="top_title">
 		<div class="title_container">
@@ -10,6 +12,59 @@
 			<div style="margin-top: 5px;" class="logout">
 				<%= link_to "log out", '/', :class =>'event_new' %>
 			</div>
+		</div>
+	</div>
+</div>
+
+<div class="dialog_translucent_background" hidden='true' style="z-index: 999999">
+	<div class="dialog">
+		<div class="dialog_title">
+			New Event
+		</div>
+		<div class="dialog_content">
+			<%= form_tag do %>
+			<table class="uiInfoTable">
+				<tr>
+					<th class="dialg_label"> <%= label_tag :q, "Name:" %></th><td>
+					<div style="width: 100%;">
+						<%= text_field_tag :q, nil, :class => "dialog_data" %>
+					</div></td>
+				</tr>
+				<tr>
+					<th class="dialg_label"><%= label_tag :q, "Description:" %></th>
+					<div style="width: 100%;">
+						<td> <textarea class="dialog_data" id="q" name="q"></textarea> </td>
+					</div>
+				</tr>
+				<tr>
+					<th class="dialg_label"> <%= label_tag :q, "Where" %></th>
+					<div style="width: 100%;">
+						<td> <%= text_field_tag :q,nil, :class => "dialog_data" %> </td>
+					</div>
+				</tr>
+				<tr>
+					<th class="dialg_label"> <%= label_tag :q, "Date" %></th>
+						<td> <%= text_field_tag :q %>
+						<%= text_field_tag :q %> </td>
+				</tr>
+				<tr>
+					<th class="dialg_label"> <%= label_tag :q, "Privacy" %></th><td> <select id="q_city" name="q[city]"><option value="1">Lisbon</option><option value="2">Madrid</option></select> </td>
+				</tr>
+			</table>
+		</div>
+		<div class="dialog_footer">
+			<table>
+				<tr>
+					<td> 
+						<input class="dialog_footer_button" name="commit" type="submit" value="Save" style='padding: 0px;border: 0px;height:20px;'>
+						<!-- <%= submit_tag "Save", :class=> "dialog_footer_button"%> -->
+					<% end %> </td>
+					<td>
+					<div id="dialog_cancel" style="margin-left: 0px" class="dialog_footer_button">
+						Cancel
+					</div></td>
+				</tr>
+			</table>
 		</div>
 	</div>
 </div>
