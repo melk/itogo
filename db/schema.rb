@@ -11,28 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130707141039) do
+ActiveRecord::Schema.define(version: 20130829090455) do
 
-  create_table "locations", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.float    "longitude"
+  create_table "events", force: true do |t|
+    t.string   "title",                   null: false
+    t.text     "description"
+    t.date     "s_date"
+    t.time     "s_time"
+    t.date     "e_date"
+    t.time     "e_time"
     t.float    "latitude"
-    t.boolean  "gmaps"
+    t.float    "longitude"
+    t.integer  "visibility",  default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
-  end
-
-  create_table "users", force: true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image"
-    t.boolean  "online",           default: false
+    t.integer  "user_id"
   end
 
 end
