@@ -11,9 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130829090455) do
+ActiveRecord::Schema.define(version: 20130831030523) do
 
   create_table "events", force: true do |t|
+    t.integer  "user_id",                 null: false
     t.string   "title",                   null: false
     t.text     "description"
     t.date     "s_date"
@@ -25,7 +26,7 @@ ActiveRecord::Schema.define(version: 20130829090455) do
     t.integer  "visibility",  default: 1
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.string   "location"
   end
 
 end

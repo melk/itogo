@@ -4,6 +4,8 @@ ToGo::Application.routes.draw do
   #set home
   get "main/home"
   #set events
+  post 'events/create', as: 'event_create'
+  # get '/events/create/', to: 'events#create', as: 'event_create'
   get 'events/event'
   get 'main/new_event'
   get "main/events"

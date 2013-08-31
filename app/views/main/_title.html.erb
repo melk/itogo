@@ -22,43 +22,43 @@
 			New Event
 		</div>
 		<div class="dialog_content">
-			<%= form_tag do %>
+
+			<%= form_for :event, url: event_create_path do |f| %>
 			<table class="uiInfoTable">
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Name:" %></th><td>
+					<th class="dialg_label"> <%= f.label :title, "Name:" %></th><td>
 					<div style="width: 100%;">
-						<%= text_field_tag :q, nil, :class => "dialog_data" %>
+						<%= f.text_field :title, :class => "dialog_data" %>
 					</div></td>
 				</tr>
 				<tr>
-					<th class="dialg_label"><%= label_tag :q, "Description:" %></th>
+					<th class="dialg_label"><%= f.label :description, "Description:" %></th>
 					<div style="width: 100%;">
-						<td> <textarea class="dialog_data" id="q" name="q"></textarea> </td>
+						<td> <%= f.text_area :description, class: 'dialog_data' %>
 					</div>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Where" %></th>
+					<th class="dialg_label"> <%= f.label nil, "Where" %></th>
 					<div style="width: 100%;">
-						<td> <%= text_field_tag :q,nil, :class => "dialog_data" %> </td>
+						<td> <%= f.text_field :location , :class => "dialog_data" %> </td>
 					</div>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Date" %></th>
-						<td> <%= text_field_tag :q %>
-						<%= text_field_tag :q %> </td>
+					<th class="dialg_label"> <%= f.label nil, "Date" %></th>
+					<td> <%= f.text_field :s_date %>
+					<%= f.text_field :e_date %> </td>
 				</tr>
 				<tr>
-					<th class="dialg_label"> <%= label_tag :q, "Privacy" %></th><td> <select id="q_city" name="q[city]"><option value="1">Lisbon</option><option value="2">Madrid</option></select> </td>
+					<th class="dialg_label"> <%= f.label :visibility, "Privacy" %></th><td> <%= f.select :visibility, [['public', 0], ['private', 1], ['need authority' ,2 ]] %> </td>
 				</tr>
 			</table>
 		</div>
 		<div class="dialog_footer">
 			<table>
 				<tr>
-					<td> 
-						<input class="dialog_footer_button" name="commit" type="submit" value="Save" style='padding: 0px;border: 0px;height:20px;'>
-						<!-- <%= submit_tag "Save", :class=> "dialog_footer_button"%> -->
-					<% end %> </td>
+					<td>
+					<!-- <input class="dialog_footer_button" name="commit" type="submit" value="Save" style='padding: 0px;border: 0px;height:20px;'> -->
+					<%= submit_tag "Save", :class=> "dialog_footer_button"%><% end %> </td>
 					<td>
 					<div id="dialog_cancel" style="margin-left: 0px" class="dialog_footer_button">
 						Cancel
