@@ -16,3 +16,5 @@ $ ->
     dialog = $('.dialog_translucent_background')
     dialog.hide()
     )
+  $( "#start_datepicker" ).datepicker();
+  $( "#end_datepicker" ).datepicker();
