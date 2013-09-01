@@ -3,7 +3,7 @@ class MainController < ApplicationController
   end
 
   def home
-    render :home
+    @events = Events.all
   end
 
   def map
