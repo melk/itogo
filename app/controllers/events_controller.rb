@@ -1,3 +1,5 @@
+require 'date'
+
 class EventsController < ApplicationController
   def new
     @event = Events.new
@@ -5,10 +7,9 @@ class EventsController < ApplicationController
   
   def create
     @event = Events.new(event_params)
-    # @event.save
-    redirect_to @event
-    
-    render text: "#{@event}"
+    # date = event_params[:s_date]
+    @event.save
+    redirect_to events_event_path
   end
   
   private
