@@ -1,6 +1,10 @@
 require 'date'
 
 class EventsController < ApplicationController
+  def event
+    @event = Events.find(params[:id])
+  end
+  
   def new
     @event = Events.new
   end

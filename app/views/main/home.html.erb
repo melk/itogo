@@ -25,22 +25,26 @@
 						<%= image_tag("profile#{i%4}.jpg", :class => "result_events",) %>
 					</div>
 					<div class="events_info">
-						<%= event.title %>
-						<br>
-						<%= event.description %>
-						<br>
-						<% if event.s_date != nil%>
-						時間:<%= event.s_date %> 
-						<% end %> 人數：20人
-						<br>
+						<div>
+							<%= link_to event.title, event_path(event.id) %>
+						</div>
+						<div>
+							<%= event.location %>
+						</div>
+						<div>
+							<% if event.s_date != nil%>
+							時間:<%= event.s_date %>
+							<% end %>
+							人數：20人
+						</div>
 					</div>
 					<div class="events_bottom">
-						<%= link_to 'Detail', '/events/event/' %>
-						<br>
-						<%= submit_tag("參加")%>
-						<br>
-						<%= submit_tag("加入觀察")%>
-						<br>
+						<div>
+							<%= link_to 'Join', '/events/event/' %>
+						</div>
+						<div>
+							<%= link_to 'Follow', '/events/event/' %>
+						</div>
 					</div>
 				</div>
 				<% end %>
@@ -49,4 +53,3 @@
 	</div>
 	<div class="right_column"></div>
 </div>
-
