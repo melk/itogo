@@ -9,6 +9,7 @@
 		
 			<%= link_to image_tag("googlelogin.jpg", :border => 0), user_omniauth_authorize_path(:google_oauth2) %>
 		</div>
+		
 		<div id="sing_in">
 			<% if current_user %>
 			<%= link_to('登出', destroy_user_session_path, :method => :delete) %> |
