@@ -4,17 +4,20 @@ class EventsController < ApplicationController
   def new
     @event = Events.new
   end
-  
+
   def create
-    @event = Events.new(event_params)
-    # date = event_params[:s_date]
+    event_hash = event_params
+    @event = Events.new(event_hash)
     @event.save
     redirect_to events_event_path
   end
-  
+
   private
-    def event_params
-      params[:event].merge!(:user_id => '1234')
-      params.require(:event).permit(:title, :description, :location, :s_date, :e_date, :visibility, :user_id)
-    end
+  def event_params
+    clone_params = params.deep_dup
+    clone_params[:event].merge!(:user_id => '1234')
+    s_date = Date.strptime(clone_params[:event][:s_date] , "%m/%d/%Y").to_s
+    clone_params[:event][:s_date] = s_date
+    clone_params.require(:event).permit(:title, :description, :location, :s_date, :e_date, :visibility, :user_id)
+  end
 end
