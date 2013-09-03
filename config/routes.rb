@@ -1,4 +1,6 @@
 ToGo::Application.routes.draw do
+ devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+ 
   #select start root
   root :to => "main#index"
   #set home
