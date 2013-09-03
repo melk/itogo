@@ -3,7 +3,6 @@
 <%= javascript_include_tag "http://code.jquery.com/ui/1.10.3/jquery-ui.js", "data-turbolinks-track" => true %>
 <link data-turbolinks-track="true" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" media="all" rel="stylesheet">
 
-
 <div class="dialog_translucent_background" hidden='true' style="z-index: 999999">
 	<div class="dialog">
 		<div class="dialog_title">
@@ -11,7 +10,7 @@
 		</div>
 		<div class="dialog_content">
 
-			<%= form_for :event, url: event_create_path do |f| %>
+			<%= form_for :new_event, url: event_create_path do |f| %>
 			<table class="uiInfoTable">
 				<tr>
 					<th class="dialg_label"> <%= f.label :title, "Name:" %></th><td>
@@ -44,10 +43,8 @@
 		<div class="dialog_footer">
 			<table>
 				<tr>
-					<td>
-					<!-- <input class="dialog_footer_button" name="commit" type="submit" value="Save" style='padding: 0px;border: 0px;height:20px;'> -->
-					<%= submit_tag "Save", :class=> "dialog_footer_button"%><% end %> </td>
-					<td>
+					<td><!-- <input class="dialog_footer_button" name="commit" type="submit" value="Save" style='padding: 0px;border: 0px;height:20px;'> --> <%= submit_tag "Save", :class=> "dialog_footer_button"%><% end %> </td>
+					<td> 
 					<div id="dialog_cancel" style="margin-left: 0px" class="dialog_footer_button">
 						Cancel
 					</div></td>
