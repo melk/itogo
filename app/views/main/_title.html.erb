@@ -8,7 +8,10 @@
 				<%= link_to "New Event", '/main/new_event', :class =>'event_new', :remote => true, "data-type" => "script" %>
 			</div>
 			<div style="margin-top: 5px;" class="logout">
-				<%= link_to "log out", '/', :class =>'event_new' %>
+				<% if current_user %> welcome ,<%= current_user.name =%>
+				<%= link_to('登出', destroy_user_session_path, :method => :delete) %>
+				<% end %>
+				<!-- <%= link_to "log out", '/', :class =>'event_new' %> -->
 			</div>
 		</div>
 	</div>
