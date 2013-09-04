@@ -11,14 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130826134418) do
+ActiveRecord::Schema.define(version: 20130903042742) do
 
-  create_table "locations", force: true do |t|
-    t.string   "name"
-    t.string   "address"
-    t.float    "longitude"
+  create_table "events", force: true do |t|
+    t.integer  "user_id",                 null: false
+    t.string   "title",                   null: false
+    t.text     "description"
+    t.date     "s_date"
+    t.time     "s_time"
+    t.date     "e_date"
+    t.time     "e_time"
     t.float    "latitude"
-    t.boolean  "gmaps"
+    t.float    "longitude"
+    t.integer  "visibility",  default: 1
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "location"
+  end
+
+  create_table "people_actions", force: true do |t|
+    t.integer  "u_id",                   null: false
+    t.integer  "e_id",                   null: false
+    t.integer  "action",     default: 0, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,9 +50,6 @@ ActiveRecord::Schema.define(version: 20130826134418) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

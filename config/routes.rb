@@ -6,7 +6,10 @@ ToGo::Application.routes.draw do
   #set home
   get "main/home"
   #set events
-  get 'events/event'
+  post 'events/create', as: 'event_create'
+  # get '/events/create/', to: 'events#create', as: 'event_create'
+  get 'events/join/:id', to: 'events#join', as: 'join'
+  get 'events/event/:id', to: 'events#event' , as: 'event'
   get 'main/new_event'
   get "main/events"
   get "main/people"
