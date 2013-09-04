@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20130826134418) do
-=======
 ActiveRecord::Schema.define(version: 20130903042742) do
->>>>>>> 295f51e394104a5d7b18820ce9464829428673e4
 
   create_table "events", force: true do |t|
     t.integer  "user_id",                 null: false
@@ -33,7 +29,14 @@ ActiveRecord::Schema.define(version: 20130903042742) do
     t.string   "location"
   end
 
-<<<<<<< HEAD
+  create_table "people_actions", force: true do |t|
+    t.integer  "u_id",                   null: false
+    t.integer  "e_id",                   null: false
+    t.integer  "action",     default: 0, null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -47,17 +50,6 @@ ActiveRecord::Schema.define(version: 20130903042742) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-=======
-  create_table "people_actions", force: true do |t|
-    t.integer  "u_id",                   null: false
-    t.integer  "e_id",                   null: false
-    t.integer  "action",     default: 0, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
->>>>>>> 295f51e394104a5d7b18820ce9464829428673e4
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
