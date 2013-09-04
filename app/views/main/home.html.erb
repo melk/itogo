@@ -1,20 +1,6 @@
 
 <%= render partial: "title" %>
 
-<%= javascript_include_tag "main" %>
-<div class="top_title">
-	<div class="title_container">
-		<div class="iToGo">
-			<%= link_to "iTOGO","/main/home",id:"text2" %>
-		</div>
-		<div class="logout">
-				<% if current_user %> welcome ,<%= current_user.name =%>
-			<%= link_to('登出', destroy_user_session_path, :method => :delete) %>
-			<% end %>
-		</div>
-	</div>
-</div>
-
 <div class="container">
 	<div class="left_column">
 		<div class="top_profile">
